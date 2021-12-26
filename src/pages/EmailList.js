@@ -77,13 +77,18 @@ function EmailList() {
       </div>
       <div className={classes.list}>
         {email.map(({ message, subject, timestamp, to, id }) => (
-          <EmailRow
-            key={id}
-            title={to}
-            subject={subject}
-            message={message}
-            time={timestamp}
-          />
+          <div key={id}>
+            <EmailRow
+              key={id}
+              title={to}
+              subject={subject}
+              description={message}
+              time={new Date(timestamp?.seconds * 1000).toLocaleString(
+                "en-US",
+                { timeZone: "Asia/Kolkata" }
+              )}
+            />
+          </div>
         ))}
       </div>
     </div>

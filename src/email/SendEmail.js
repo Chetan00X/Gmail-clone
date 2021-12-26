@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Button } from "@material-ui/core";
 import { useForm } from "react-hook-form";
 import { closeSendMail } from "../store/mail-slice";
+import { addMail } from "../store/mail-slice";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";

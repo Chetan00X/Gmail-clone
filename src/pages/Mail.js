@@ -14,14 +14,30 @@ import { useNavigate } from "react-router-dom";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import PrintIcon from "@mui/icons-material/Print";
 import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
+import MailContent from "./MailContent";
+import { removeShowMail } from "../store/mail-slice";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Mail() {
   let navigate = useNavigate();
+
+  const correspondingMail = useSelector((state) => {
+    return state.mail.correspondingMail;
+  });
+  const dispatch = useDispatch();
+  console.log(correspondingMail);
+
+  const gobacktoHomepageHandler = () => {
+    navigate("/");
+    dispatch(removeShowMail());
+  };
+
   return (
     <div className={classes.mail}>
       <div className={classes["tools"]}>
         <div className={classes["toolsLeft"]}>
-          <IconButton onClick={() => navigate("/")}>
+          <IconButton onClick={gobacktoHomepageHandler}>
             <ArrowBackIcon />
           </IconButton>
           <IconButton>
@@ -61,23 +77,7 @@ function Mail() {
           </IconButton>
         </div>
       </div>
-      <div className={classes["body"]}>
-        <div className={classes["bodyHeader"]}>
-          <h2>Subject</h2>
-          <LabelImportantIcon className={classes["important"]} />
-          <p>title</p>
-          <p className={classes["time"]}>10pm</p>
-        </div>
-
-        <div className={classes["message"]}>
-          <p>
-            this is a message Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit. Deserunt, corrupti. Aperiam recusandae rem ipsum,
-            debitis aut eaque sint praesentium maxime quibusdam suscipit
-            necessitatibus culpa explicabo neque vitae? Quo, eaque earum
-          </p>
-        </div>
-      </div>
+      <MailContent />
     </div>
   );
 }
