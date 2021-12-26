@@ -1,0 +1,61 @@
+.sendMail {
+  position: absolute;
+  bottom: 0px;
+  right: 5rem;
+  background-color: #404040;
+  width: 40%;
+  height: 40%;
+  max-width: 50rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid whitesmoke;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.24);
+}
+
+.header {
+  padding: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+}
+
+.header h3 {
+  color: whitesmoke;
+  font-size: 1.3rem;
+}
+
+.send {
+  background-color: #3079ed !important;
+  text-transform: capitalize !important;
+  margin: 1.5rem !important;
+}
+
+.closeEmail {
+  cursor: pointer;
+}
+
+.sendMail form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.sendMail form input {
+  height: 3rem;
+  padding: 1rem;
+  border-bottom: 1px solid whitesmoke;
+  outline: none;
+}
+
+.sendMessage {
+  flex: 1;
+}
+.sendMail__error {
+  background-color: white;
+  color: red;
+  text-align: right;
+  padding: 2px;
+}

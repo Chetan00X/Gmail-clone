@@ -1,0 +1,40 @@
+.row {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  border-bottom: 1px solid whitesmoke;
+  cursor: pointer;
+  z-index: 999;
+}
+.row:hover {
+  border-top: 1px solid whitesmoke;
+  box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.24);
+}
+.rowMessage {
+  display: flex;
+  flex: 0.8;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.rowMessage h4 {
+  width: 40rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* to add ... */
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.rowtitle {
+  font-size: 1.3rem;
+  flex: 0.3;
+}
+.rowTime {
+  padding-right: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.rowDescription {
+  font-weight: 400;
+  color: gray;
+}

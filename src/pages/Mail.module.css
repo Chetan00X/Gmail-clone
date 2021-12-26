@@ -1,0 +1,48 @@
+.mail {
+  flex: 1;
+  background-color: whitesmoke;
+}
+.tools {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.toolsLeft {
+  display: flex;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+  background-color: white;
+  padding: 2rem;
+  height: 100vh;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.24);
+}
+.bodyHeader {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid whitesmoke;
+  padding: 2rem;
+  position: relative;
+}
+.important {
+  color: #e8ab02;
+}
+.bodyHeader h2 {
+  font-weight: 400;
+  margin-right: 2rem;
+}
+
+.message p {
+  padding: 1rem;
+  margin-right: 2rem;
+  overflow-wrap: break-word;
+}
+.time {
+  position: absolute;
+  top: 2.4rem;
+  right: 0;
+  font-size: 1.2rem;
+  color: gray;
+}
